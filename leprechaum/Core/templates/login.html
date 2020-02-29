@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Leprechaum</title>
+  </head>
+  <body>
+    <div class="login-box">
+      <form class="login-form" action="" method="post">
+        {% csrf_token %}
+        <div><input type="text" name="lepre_username" value="" placeholder="Username"></div>
+        <div><input type="password" name="lepre_password" value="" placeholder="Password"><div>
+        <div><button type="submit" name="button">Entrar</button></div>
+      </form>
+    </div>
+  </body>
+</html>
