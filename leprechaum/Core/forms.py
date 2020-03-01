@@ -5,3 +5,6 @@ class TorrentsForms(forms.ModelForm):
     class Meta:
         model = Torrents
         fields = ['nome', 'magnet', 'type']
+        widgets = {
+            'magnet': forms.TextInput()
+        }
