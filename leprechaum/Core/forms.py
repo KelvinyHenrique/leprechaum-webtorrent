@@ -6,5 +6,7 @@ class TorrentsForms(forms.ModelForm):
         model = Torrents
         fields = ['nome', 'magnet', 'type']
         widgets = {
-            'magnet': forms.TextInput()
+            'nome': forms.TextInput({'class':'col form-control'}),
+            'magnet': forms.TextInput({'class':'col form-control'}),
+            'type': forms.Select({'class':'col form-control'})
         }
