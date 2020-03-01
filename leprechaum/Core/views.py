@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
+from .models import Torrents
+from .forms import TorrentsForms
+
 def index(request):
 
     username = request.POST.get('lepre_username')
@@ -18,7 +21,13 @@ def index(request):
 
 @login_required
 def home(request):
-    return render(request, 'home.html')
+    list_ = Torrents.objects.all()
+    form = TorrentsForms(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    return render(request, 'home.html', {'form': form, 'torrents': list_})
 
 def logout_(request):
     logout(request)
