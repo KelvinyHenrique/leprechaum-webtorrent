@@ -1,17 +1,49 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Leprechaum</title>
+    <link rel="stylesheet" href="{% static './css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static './css/paper-dashboard.min.css' %}">
+    <style media="screen">
+      body {
+        background-color: #f1f1f1;
+      }
+      .login-box {
+        margin: 0 auto;
+        margin-top: 12%;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="login-box">
-      <form class="login-form" action="" method="post">
-        {% csrf_token %}
-        <div><input type="text" name="lepre_username" value="" placeholder="Username"></div>
-        <div><input type="password" name="lepre_password" value="" placeholder="Password"><div>
-        <div><button type="submit" name="button">Entrar</button></div>
-      </form>
+    <div class="login-box col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>Acesse Sua Conta</h2>
+        </div>
+
+        <div class="card-body">
+          <form class="login-form" action="" method="post">
+            {% csrf_token %}
+            <div class="form-body">
+              <div class="form-group">
+                <input type="text" class="form-control" name="lepre_username" value="" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="lepre_password" value="" placeholder="Password">
+              </div>
+            </div>
+
+              <button class="btn btn-success" type="submit" name="button">Entrar</button>
+
+          </form>
+        </div>
+
+      </div>
     </div>
   </body>
 </html>
