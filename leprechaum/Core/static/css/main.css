@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+.layout-flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 720px;
+}
+
+.navegacao-esquerda {
+    width: 18%;
+    height: 100%;
+    background-color: #13CE66;
+    color: #FFFFFF;
+}
+
+.content-right {
+    width: 83%;
+    height: 100%;
+}
+
+
+.right-title {
+    width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputs-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 135px;
+}
+
+.form-add-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#input-home {
+    width: 230px;
+    height: 32px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1.3px solid rgb(172, 170, 170);
+    border-radius: 3px;
+    padding: 0;
+}
+
+.select_tipo {
+    width: 232.60px;
+    height: 34.60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1.3px solid rgb(172, 170, 170);
+    border-radius: 3px;
+    padding: 0;
+}
+
+.botao-salvar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-salvar button {
+    width: 150px;
+    height: 38px;
+    border: none;
+    background-color: rgb(88, 87, 87);
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.list-torrents {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.conteiner_table {
+    width: 78% !important;
+    text-align: center;
+    
+}
+
+.table tr {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    
+}
+
+.table {
+    border-bottom: 1px solid #dee2e6;
+}
